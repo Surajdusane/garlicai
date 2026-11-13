@@ -1,0 +1,11 @@
+# deps
+node_modules/
+.gen/
+.env
+.env.*
+.setup.json
+.theme.json
+/dist
+gen/
+prompt.md
+gen

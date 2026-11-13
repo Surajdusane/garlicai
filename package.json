@@ -1,0 +1,35 @@
+{
+  "name": "garlicai",
+  "version": "0.0.7",
+  "description": "Generate carousel slide images using GPT-Image-2 — interactive CLI wizard",
+  "type": "module",
+  "bin": {
+    "garlicai": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "cross-env ASSET_MODE=local bun run src/index.ts",
+    "build": "rimraf dist && bun build src/index.ts --outfile dist/index.js --target=node && node src/scripts/build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@hyzyla/pdfium": "^2.1.13",
+    "@inquirer/prompts": "^7.5.2",
+    "chalk": "^5.4.1",
+    "clipboardy": "^5.3.1",
+    "fast-glob": "^3.3.3",
+    "openai": "6.42.0",
+    "ora": "^8.2.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "cross-env": "^10.1.0",
+    "rimraf": "^6.1.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
